@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    box-sizing: inherit;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+/* <<<<<<<<< Nav bar section >>>>>>>>>>> */
+
+header{
+    height:8vh ;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    
+
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   width: 80%;
+   margin: auto;
+  
+}
+
+ul{
+   list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.login-btn{
+    padding: .5em 1.5em;
+    border-radius: 2px;
+    border-style: none;
+    font-size: .9rem;
+    font-weight: 300;
+    font-family: sans-serif;
+    
+}
+.btn-hollow{
+    color: green; 
+    background: transparent;   
+    border: 1px solid #00A145;
+      
+}
+.btn-hollow:hover{
+    background: rgba(30, 153, 30, 0.1) ;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+/* <<<<<<<<<<<<<<< search bar section >>>>>>>>>>>>>>>> */
+
+.presentation{     
+   background-image: url("/Images/background\ 2.jpg"); 
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 90vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: auto;  
+   
+
+}
+
+.tille-bar h1{
+   width: 100%;
+   color: #ffffff;
+   font-size: 1.8rem;
+   font-weight: 700;
+   
+  
+}
+.tille-bar{
+    display: flex;
+    margin: 1em auto;
+  
+    
+}
+
+.nav-links{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    background: white;
+    align-items: center;
+    border-radius: 5px;
+  
+  
+   
+}
+
+/* @media screen and (max-width:990px){
+    .nav-links{
+        min-width: 65%;
+              
+    }
+} */
+
+
+
+
+.search-btn-list{
+  
+    background: yellowgreen;
+    border-radius: 0px 5px 0px 0px;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    
+}
+
+.search-btn-list a{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;  
+    
+     
+}
+
+.search-input-list{
+    flex: 1;
+  
+    
+    
+}
+
+.search-input-list input{
+ width: 100%;
+ padding: .9em 0;
+ border: none;
+ flex-grow: 3;
+ 
+}
+.search-input-list input::placeholder{
+    color: #BEBEBE;
+    opacity: 1;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+.search-icon-list{
+    padding: 0 1em;
+}
+
+
+
+
+
+
+/* <<<<<<<<<<<<<<< food menu section >>>>>>>>>>>>> */
+.food-section{
+    padding: 4em 0;
+}
+
+.food-gird {
+
+    padding: 1em 0;
+    font-size: 40px;  
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(240px, fr)); */
+    gap: 1em;
+    width: 80%;
+    margin: 1em auto;
+    border: 1px solid black;
+    
+    
+}
+
+
+.food-gird div{
+   background: hotpink; 
+   border: 1px solid black;
+   margin-top: 1em;
+   width: 50%;
+   margin: auto;
+}
+
+.food-gird div img{
+    width: 100%;
+    object-fit: contain;
+    
+}
