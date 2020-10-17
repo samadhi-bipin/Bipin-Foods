@@ -22,6 +22,7 @@ header{
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 1;
     
 
 }
@@ -146,6 +147,7 @@ a{
 
 .search-input-list input{
  width: 100%;
+ height: 100%;
  padding: .9em 0;
  border: none;
  flex-grow: 3;
@@ -167,36 +169,100 @@ a{
 
 
 /* <<<<<<<<<<<<<<< food menu section >>>>>>>>>>>>> */
+
+
+
+ /* master section */
+
 .food-section{
-    padding: 4em 0;
-}
-
-.food-gird {
-
-    padding: 1em 0;
-    font-size: 40px;  
-    display: grid;
-    grid-template-columns:  1fr 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(240px, fr)); */
-    gap: 1em;
-    width: 80%;
-    margin: 1em auto;
-    border: 1px solid black;
-    
-    
-}
-
-
-.food-gird div{
-   background: hotpink; 
-   border: 1px solid black;
-   margin-top: 1em;
-   width: 50%;
-   margin: auto;
-}
-
-.food-gird div img{
+    text-align: center;
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    margin: 2.5em 0;
+    border-top: 1px solid rgb(197, 190, 190, 0.4);
+    border-bottom: 1px solid rgb(197, 190, 190, 0.4);
+    /* background: rgb(126, 190, 182);  */
+ 
+   
     
 }
+  /* main .container */
+
+  .container{
+
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+    /* border: 1px solid black; */
+    padding: 1em 1em;
+  
+   
+    
+}
+
+ /* MENU title BAR */
+
+.menu-title{
+    display: flex;
+    justify-content: space-between;
+    /* background: rgb(0, 0, 0);; */
+    
+}
+
+
+
+ /* FOOD GRID */
+
+.food-gird{
+    /* background: goldenrod; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)  );
+    column-gap: 1em;
+    row-gap: 1em;
+   
+  
+
+}
+
+.listing{
+    margin: 1em 0;  
+    /* background: #00A145; */
+   
+}
+
+/* now here i got the solution to fit the img in the cotnainer without with atuo resezing img  */
+
+
+.listing-photo {
+    height: 170px;
+    position: relative;
+    overflow: hidden; 
+  
+  
+}
+
+.listing-photo a{
+   width: 100%;
+}
+
+
+.listing-photo a :hover{
+    scale: 1.2;
+    transition: 0.9s all;
+}
+
+.listing-photo img{   
+  width: 100%;
+  
+}
+.tittle-bar{
+    margin-top: 0.5em;
+}
+.tittle-bar a{
+    color: gray;
+    font-weight: 300;
+    font-size: 1.4rem;
+  
+
+}
+
