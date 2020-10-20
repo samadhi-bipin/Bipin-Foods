@@ -8,6 +8,7 @@ body{
 
     box-sizing: inherit;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
 
 }
 
@@ -68,105 +69,130 @@ a{
 
 /* <<<<<<<<<<<<<<< search bar section >>>>>>>>>>>>>>>> */
 
-.presentation{     
+
+.presentation{    
+   position: relative;
    background-image: url("/Images/background\ 2.jpg"); 
    background-repeat: no-repeat;
    background-size: cover;
    height: 90vh;
    display: flex;
-   flex-direction: column;
-   justify-content: center;
    align-items: center;
-   margin: auto;  
-   
+   justify-content: center;
+
 
 }
 
-.tille-bar h1{
-   width: 100%;
-   color: #ffffff;
-   font-size: 1.8rem;
-   font-weight: 700;
-   
-  
+  /* Tittles of the page */
+
+ .heading{
+     margin-bottom: 1em;
+ }
+.heading h1{
+    color: white;
 }
-.tille-bar{
+
+/* ************************************* */
+
+.search-section{
     display: flex;
-    margin: 1em auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 42em;
+    max-width: 90%;
+    /* background-color: rgb(255, 255, 255); */
+
+    
+
+}
+ 
+.search-bar{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
   
+   /* justify-content: center; */
+
+
+   
+}
+
+
+.search-input-list {
+    width: 75%;
+   
     
 }
-
-.nav-links{
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    background: white;
-    align-items: center;
-    border-radius: 5px;
-  
-  
-   
-}
-
-/* @media screen and (max-width:990px){
-    .nav-links{
-        min-width: 65%;
-              
-    }
-} */
-
-
-
 
 .search-btn-list{
+    width: 25%;
   
-    background: yellowgreen;
-    border-radius: 0px 5px 0px 0px;
-    height: 100%; 
-    display: flex;
-    align-items: center;
-    padding: 1em;
     
 }
 
-.search-btn-list a{
+.search-input-list input {
+    width: 100%;
+    padding: 1em 0;
+    padding-left: 1em;
+    border-radius: 0.4em 0 0 0.4em;
+    border-style: none;
+  }
+
+.search-btn-list button{
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    border-radius: 0 0.4em 0.4em 0;
+    background: rgb(34, 170, 57);
     color: white;
-    font-size: 1rem;
-    font-weight: bold;  
-    
-     
-}
-
-.search-input-list{
-    flex: 1;
-  
-    
-    
-}
-
-.search-input-list input{
- width: 100%;
- height: 100%;
- padding: .9em 0;
- border: none;
- flex-grow: 3;
- 
-}
-.search-input-list input::placeholder{
-    color: #BEBEBE;
-    opacity: 1;
     font-size: 0.9rem;
+    font-family:  sans-serif;
     font-weight: 300;
 }
-.search-icon-list{
-    padding: 0 1em;
+
+@media screen and (max-width:375px){
+
+    
+.search-bar{
+        
+        flex-direction: column;
+        align-items: center;
+       
+        
+    }
+    .search-btn-list button{
+        padding: 1em 0;
+        border-radius: 0.4em 0.4em 0.4em 0.4em;
+ 
+
+    }
+
+    .search-btn-list{
+        margin-top: 1em;
+        width: 35%;
+        
+       
+       
+    }
+    .search-input-list{
+        width: 100%;
+
+    }
+
+    .search-input-list input {
+        border-radius: 0.4em 0.4em 0.4em 0.4em;
+        
+      }
+
+
+
+
 }
 
-
-
-
-
+/* .search-input-list input{
+    padding-right: 12em;
+} */
 
 /* <<<<<<<<<<<<<<< food menu section >>>>>>>>>>>>> */
 
@@ -207,6 +233,7 @@ a{
     justify-content: space-between;
     /* background: rgb(0, 0, 0);; */
     
+    
 }
 
 
@@ -220,12 +247,13 @@ a{
     column-gap: 1em;
     row-gap: 1em;
    
-  
+   
 
 }
 
 .listing{
-    margin: 1em 0;  
+    margin: 1em 0;
+      
     /* background: #00A145; */
    
 }
@@ -237,12 +265,14 @@ a{
     height: 170px;
     position: relative;
     overflow: hidden; 
+    filter: drop-shadow(0px 6px 4px black);
   
   
 }
 
 .listing-photo a{
    width: 100%;
+   
 }
 
 
@@ -255,10 +285,17 @@ a{
   width: 100%;
   
 }
+
+/* Titles of the food menu */
+
+.menu-title h4{
+
+}
+
 .tittle-bar{
     margin-top: 0.5em;
 }
-.tittle-bar a{
+.tittle-bar a,.menu-title h4{
     color: gray;
     font-weight: 300;
     font-size: 1.4rem;
@@ -266,3 +303,160 @@ a{
 
 }
 
+/* about us section */
+
+.aboutus-section{
+   position: relative;
+   padding: 4em 0;
+   background: url("/Images/aboutus.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   margin: 1em 0;
+  
+
+
+}
+.overlay{
+    position: absolute;
+    background: rgb(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+   
+}
+.about-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    margin: auto;
+    /* width: 32em; */
+    width: 40em;
+    max-width: 75%;
+   
+  
+}
+
+.about-container P{
+   line-height: 1.6;
+   margin-bottom: 1em;
+   font-weight: 300;
+   font-size: 1.1rem;
+  
+}
+.about-container button{
+
+         padding: 0.5em 1.2em;         
+         margin: auto;
+         font-family: 'Roboto', sans-serif;
+         font-size: 1rem;
+         border-radius: 0.2em;
+         border-style: none;
+         text-transform: uppercase;
+         font-weight: 600;
+        
+
+}
+
+.about-container button:hover{
+
+    color: green;
+    cursor: pointer;
+    
+
+
+}
+
+/* <<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+.app-section{
+
+        min-height: 55vh;
+        margin: 1em 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border-top:1px solid gray ;
+        border-bottom: 1px solid gray;
+       
+
+        
+}
+
+.app-container{
+ 
+    width: 55%;
+    
+   
+}
+
+
+.app-section .app-container .row{
+   
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+    
+}
+
+.play-container{
+   
+    display: flex;
+    align-items: center;
+   
+    
+}
+.play-container .playstore h1,p {
+    padding: 0.5em 0;
+}
+
+
+
+.playstore img{
+    height: 7vh;
+  
+}
+
+.mobile{
+    height: 66vh;
+    
+}
+
+.mobile img{
+    height: 100%;
+  
+   
+}
+
+
+@media screen and (max-width:375px)
+
+{
+
+
+    .app-section .app-container .row{
+   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+         
+        
+    }
+    
+    .play-container{
+        margin-top: 2em;
+    }
+    .mobile{
+        margin-top: 1em;
+    }
+    
+    .mobile img{
+        height: 80%;
+    }
+
+}
